@@ -1,6 +1,4 @@
 # 1. part
-import math
-
 inp = [i for i in open('5.txt').read().splitlines()]
 
 print(inp)
@@ -32,15 +30,13 @@ for k in inp:
 
 print('Part 1:', max(ids))
 
-print(sorted(ids))
 ids.sort()
 ids = [int(i) for i in ids]
-low = min(ids)
-my_ids = []
+start = min(ids)
 
-while low < max(ids):
-    if low not in ids:
-        my_ids.append(low)
-    low += 1
-print('Part 2:', my_ids)
+while start < max(ids):
+    if start not in ids:
+        print('Part 2:', start)
+        break
+    start += 1
 
